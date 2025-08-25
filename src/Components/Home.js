@@ -120,7 +120,7 @@ const Home = () => {
             </h1>
             
             <p className="home-hero-description">
-             <b>IT Graduate</b>   |   <b> Intern Project Manager</b>    |   <b>Creator</b>   |  <b>Karateka</b> 
+             <b>Information Systems Engineering Graduate</b>   |   <b> Intern Project Manager</b>    |   <b>Creator</b>   |  <b>Karateka</b> 
             </p>
           </div>
 

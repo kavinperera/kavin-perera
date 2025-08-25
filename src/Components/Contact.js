@@ -8,9 +8,6 @@ import {
   FaFacebook, 
   FaYoutube,
   FaTwitter,
-  FaWhatsapp,
-  FaMapMarkerAlt,
-  FaPhone,
   FaRocket,
   FaUser,
   FaComments
