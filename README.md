@@ -18,7 +18,7 @@ The project is styled with custom CSS and deployed on **GitHub Pages** using the
 
 ## 🚀 Deployment
 The project is live on GitHub Pages:  
-👉 [Your GitHub Pages Link Here](https://kavinperera.github.io/kavin-web/)
+👉 [Your GitHub Pages Link Here](https://kavinperera.github.io/kavinperera/)
 
 ---
 
