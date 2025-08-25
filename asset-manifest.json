@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/kavin_perera/static/css/main.13ebc2fa.css",
-    "main.js": "/kavin_perera/static/js/main.00a4cf61.js",
-    "static/media/147d06ae-fbd5-46cd-bb51-7054e3dbbad8.png": "/kavin_perera/static/media/147d06ae-fbd5-46cd-bb51-7054e3dbbad8.d8f88551b8e4ec14d9c5.png",
-    "index.html": "/kavin_perera/index.html",
-    "main.13ebc2fa.css.map": "/kavin_perera/static/css/main.13ebc2fa.css.map",
-    "main.00a4cf61.js.map": "/kavin_perera/static/js/main.00a4cf61.js.map"
+    "main.css": "/kavin-perera/static/css/main.13ebc2fa.css",
+    "main.js": "/kavin-perera/static/js/main.497ad89c.js",
+    "static/media/147d06ae-fbd5-46cd-bb51-7054e3dbbad8.png": "/kavin-perera/static/media/147d06ae-fbd5-46cd-bb51-7054e3dbbad8.d8f88551b8e4ec14d9c5.png",
+    "index.html": "/kavin-perera/index.html",
+    "main.13ebc2fa.css.map": "/kavin-perera/static/css/main.13ebc2fa.css.map",
+    "main.497ad89c.js.map": "/kavin-perera/static/js/main.497ad89c.js.map"
   },
   "entrypoints": [
     "static/css/main.13ebc2fa.css",
-    "static/js/main.00a4cf61.js"
+    "static/js/main.497ad89c.js"
   ]
 }
