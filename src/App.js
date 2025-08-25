@@ -9,11 +9,12 @@ import Contact from "./Components/Contact";
 function App() {
   return (
     <Router>
-      {/* ✅ Navbar shows on every page */}
+      {/* ✅ Navbar is always visible */}
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />        {/* Default route */}
+        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/business" element={<Business />} />
         <Route path="/contact" element={<Contact />} />
