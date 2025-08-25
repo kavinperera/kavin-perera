@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/kavin-web/static/css/main.8eb11db8.css",
-    "main.js": "/kavin-web/static/js/main.08263f54.js",
+    "main.js": "/kavin-web/static/js/main.ff646af9.js",
     "static/media/147d06ae-fbd5-46cd-bb51-7054e3dbbad8.png": "/kavin-web/static/media/147d06ae-fbd5-46cd-bb51-7054e3dbbad8.d8f88551b8e4ec14d9c5.png",
     "index.html": "/kavin-web/index.html",
     "main.8eb11db8.css.map": "/kavin-web/static/css/main.8eb11db8.css.map",
-    "main.08263f54.js.map": "/kavin-web/static/js/main.08263f54.js.map"
+    "main.ff646af9.js.map": "/kavin-web/static/js/main.ff646af9.js.map"
   },
   "entrypoints": [
     "static/css/main.8eb11db8.css",
-    "static/js/main.08263f54.js"
+    "static/js/main.ff646af9.js"
   ]
 }
