@@ -42,9 +42,9 @@ function Business() {
   ];
 
   const achievements = [
-    { year: "2024", milestone: "Brand Launch", description: "Born from vision" },
-    { year: "2024", milestone: "First Collection", description: "Signature debut" },
-    { year: "2025", milestone: "International Recognition", description: "Global presence" }
+    { year: "2025 April", milestone: "Brand Launch", description: "Born from vision" },
+    { year: "2025", milestone: "First Collection", description: "Signature debut" },
+    /*{ year: "2025", milestone: "International Recognition", description: "Global presence" }*/
   ];
 
   return (
@@ -84,7 +84,7 @@ function Business() {
       <section className="klybrix-premium-hero">
         <div className="klybrix-hero-content">
           <div className="klybrix-hero-badge">
-            <span className="klybrix-badge-text">EST. 2024 • SRI LANKA</span>
+            <span className="klybrix-badge-text">EST. 2025 • SRI LANKA</span>
           </div>
           
           <h1 className="klybrix-hero-title">

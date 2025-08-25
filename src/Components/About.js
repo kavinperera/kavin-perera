@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./About.css";
+
 import { 
   FaUser, 
   FaGraduationCap, 
@@ -19,7 +20,8 @@ import {
   FaCalendar,
   FaGithub,
   FaExternalLinkAlt,
-  FaBehance
+  FaBehance,
+  FaRunning
 } from "react-icons/fa";
 
 function About() {
@@ -34,8 +36,8 @@ function About() {
   const handleDownloadCV = () => {
     // Create a temporary link for CV download
     const link = document.createElement('a');
-    link.href = '/path-to-your-cv.pdf'; // Update with actual CV path
-    link.download = 'Kavin_Mark_Perera_Resume.pdf';
+    link.href = '/KAVIN PERERA.pdf'; // Update with actual CV path
+    link.download = 'Kavin_Perera_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -278,10 +280,9 @@ function About() {
             <div className="projects-grid">
               <div className="project-card">
                 <div className="project-header">
-                  <h3>University Management System</h3>
+                  <h3>Employee Management System </h3>
                   <div className="project-links">
                     <FaGithub className="project-link" />
-                    <FaExternalLinkAlt className="project-link" />
                   </div>
                 </div>
                 <div className="project-tech">
@@ -304,7 +305,7 @@ function About() {
                   <h3>E-Commerce Web Application</h3>
                   <div className="project-links">
                     <FaGithub className="project-link" />
-                    <FaExternalLinkAlt className="project-link" />
+                   {/* <FaExternalLinkAlt className="project-link" />*/}
                   </div>
                 </div>
                 <div className="project-tech">
@@ -324,10 +325,9 @@ function About() {
 
               <div className="project-card">
                 <div className="project-header">
-                  <h3>Data Analytics Dashboard</h3>
+                  <h3>Hotel Management System </h3>
                   <div className="project-links">
                     <FaGithub className="project-link" />
-                    <FaExternalLinkAlt className="project-link" />
                   </div>
                 </div>
                 <div className="project-tech">
@@ -347,16 +347,14 @@ function About() {
 
               <div className="project-card">
                 <div className="project-header">
-                  <h3>Task Management System</h3>
+                  <h3>Health Management Application </h3>
                   <div className="project-links">
-                    <FaGithub className="project-link" />
                     <FaBehance className="project-link" />
                   </div>
                 </div>
                 <div className="project-tech">
-                  <span className="tech-tag">C#</span>
-                  <span className="tech-tag">.NET</span>
-                  <span className="tech-tag">SQL Server</span>
+                  <span className="tech-tag">figma</span>
+                  <span className="tech-tag">Draw.io</span>
                 </div>
                 <p className="project-description">
                   Project management tool for team collaboration, task tracking, and deadline management.
@@ -367,6 +365,30 @@ function About() {
                   <span>• Team Collaboration</span>
                 </div>
               </div>
+
+              <div className="project-card">
+                <div className="project-header">
+                  <h3>Multi-Lingual Mobile Application </h3>
+                  <div className="project-links">
+                    <FaBehance className="project-link" />
+                  </div>
+                </div>
+                <div className="project-tech">
+                  <span className="tech-tag">figma</span>
+                  <span className="tech-tag">Draw.io</span>
+                </div>
+                <p className="project-description">
+                  Project management tool for team collaboration, task tracking, and deadline management.
+                </p>
+                <div className="project-features">
+                  <span>• Task Assignment</span>
+                  <span>• Progress Tracking</span>
+                  <span>• Team Collaboration</span>
+                </div>
+              </div>
+
+
+
             </div>
           </div>
         );
@@ -375,7 +397,7 @@ function About() {
         return (
           <div className="resume-section">
             <div className="section-header">
-              <h2 className="section-title">Sports Journey</h2>
+              <h2 className="section-title">Sports Achievement</h2>
             </div>
             
             <div className="timeline-container">
@@ -603,7 +625,7 @@ case "skills":
             { id: "careerJourney", icon: FaBriefcase, text: "Career Journey" },
             { id: "skills", icon: FaCode, text: "Technical Skills" },
             { id: "projects", icon: FaProjectDiagram, text: "My Projects" },
-            { id: "Sports", icon: FaBriefcase, text: "Sports Journey" }
+            { id: "Sports", icon: FaRunning, text: "Sports" }
             
           ].map((tab) => (
             <button 

@@ -39,7 +39,7 @@ const Home = () => {
       icon: "👾",
       title: "UI UX Design",
       description
-      : "Data visualization, Power BI dashboards, and business process optimization"
+      : "Familiar with Figma and other design tools experience in responsive design"
     },
     {
       icon: "💻",
