@@ -29,6 +29,15 @@ function Navbar() {
     return location.pathname === path;
   };
 
+  const handleResumeDownload = () => {
+    // Replace 'path/to/your/resume.pdf' with the actual path to your resume file
+    const resumeUrl = '/path/to/your/resume.pdf';
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.download = 'Kavin_Perera_Resume.pdf';
+    link.click();
+  };
+
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
@@ -74,11 +83,15 @@ function Navbar() {
           </div>
         </div>
 
-        <div className="mobile-menu-toggle" onClick={toggleMobileMenu}>
-          <div className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}>
-            <span></span>
-            <span></span>
-            <span></span>
+        <div className="navbar-actions">
+        
+
+          <div className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+            <div className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
       </div>
@@ -87,3 +100,5 @@ function Navbar() {
 }
 
 export default Navbar;
+
+

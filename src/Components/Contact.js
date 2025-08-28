@@ -124,34 +124,6 @@ function Contact() {
           
           {/* Left Section */}
           <div className="contact-left">
-            
-            {/* Contact Information 
-            <div className="info-card">
-              <div className="card-header">
-                <FaUser className="card-icon" />
-                <h2>Get In Touch</h2>
-              </div>
-              
-              <div className="contact-methods">
-                {contactInfo.map((item, index) => (
-                  <a 
-                    key={index} 
-                    href={item.href} 
-                    className="contact-method"
-                    data-label={item.label}
-                  >
-                    <div className="method-icon">
-                      <item.icon />
-                    </div>
-                    <div className="method-details">
-                      <span className="method-label">{item.label}</span>
-                      <span className="method-text">{item.text}</span>
-                    </div>
-                    <div className="method-arrow">→</div>
-                  </a>
-                ))}
-              </div>
-            </div>*/}
 
             {/* Social Media */}
             <div className="social-card">
@@ -180,15 +152,7 @@ function Contact() {
               </p>
             </div>
 
-            {/* Professional Quote
-            <div className="quote-card">
-              <div className="quote-mark">"</div>
-              <blockquote className="quote-text">
-                Innovation distinguishes between a leader and a follower. 
-                Let's build the future together.
-              </blockquote>
-              <div className="quote-author">— Your Personal Philosophy</div>
-            </div>*/}
+            
           </div>
 
           {/* Right Section - Contact Form */}

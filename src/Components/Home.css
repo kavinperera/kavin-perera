@@ -1,4 +1,4 @@
-/* Home.css - Kavin Perera Portfolio Styles */
+/* Home.css - Kavin Perera Portfolio Styles - Standardized Fonts */
 
 /* Color Variables */
 :root {
@@ -12,6 +12,21 @@
   --gray-700: #374151;
   --gray-300: #d1d5db;
   --gray-400: #9ca3af;
+  
+  /* Standardized Font Sizes */
+  --font-size-hero: 3rem;        /* Hero main title */
+  --font-size-xl: 2.5rem;        /* Main section titles */
+  --font-size-lg: 1.8rem;        /* Large titles */
+  --font-size-md: 1.2rem;        /* Medium titles/subtitles */
+  --font-size-base: 1rem;        /* Body text */
+  --font-size-sm: 0.9rem;        /* Small text */
+  --font-size-xs: 0.8rem;        /* Extra small text */
+  
+  /* Standardized Font Weights */
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
 }
 
 /* Global Styles */
@@ -26,6 +41,8 @@ body {
   line-height: 1.6;
   color: var(--pure-white);
   background-color: var(--primary-black);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
 }
 
 /* Home Portfolio Container */
@@ -65,8 +82,8 @@ body {
 }
 
 .home-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
 }
 
 .home-logo-primary {
@@ -93,6 +110,8 @@ body {
   text-decoration: none;
   transition: color 0.3s ease;
   position: relative;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
 }
 
 .home-nav-link:hover {
@@ -120,6 +139,7 @@ body {
   border: none;
   color: var(--pure-white);
   cursor: pointer;
+  font-size: var(--font-size-md);
 }
 
 @media (min-width: 768px) {
@@ -140,6 +160,8 @@ body {
   color: var(--pure-white);
   text-decoration: none;
   transition: color 0.3s ease;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
 }
 
 .home-mobile-nav-link:hover {
@@ -200,6 +222,66 @@ body {
   padding: 0 1.5rem;
 }
 
+/* Profile Photo Styles */
+.home-profile-photo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  animation: home-fade-in 1s ease-out;
+}
+
+.home-profile-photo {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--accent-blue);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .home-profile-photo {
+    width: 250px;
+    height: 250px;
+    border-width: 5px;
+  }
+}
+
+.home-profile-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.5);
+}
+
+.home-profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.home-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--gray-800), var(--gray-700));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-400);
+}
+
+.home-photo-icon {
+  font-size: var(--font-size-hero);
+  margin-bottom: 0.5rem;
+}
+
+.home-photo-text {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+}
+
 .home-hero-text {
   margin-bottom: 2rem;
 }
@@ -211,14 +293,15 @@ body {
   backdrop-filter: blur(4px);
   border-radius: 9999px;
   color: var(--accent-blue);
-  font-size: 0.875rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
   margin-bottom: 1.5rem;
   animation: home-fade-in 1s ease-out;
 }
 
 .home-hero-title {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-bold);
   margin-bottom: 1.5rem;
   line-height: 1.1;
 }
@@ -237,7 +320,8 @@ body {
 }
 
 .home-hero-description {
-  font-size: 1.2rem;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-normal);
   color: var(--gray-300);
   margin-bottom: 2rem;
   max-width: 200rem;
@@ -247,7 +331,7 @@ body {
 
 @media (min-width: 768px) {
   .home-hero-description {
-    font-size: 1.2rem;
+    font-size: var(--font-size-md);
   }
 }
 
@@ -272,7 +356,8 @@ body {
   background: linear-gradient(to right, var(--light-blue), var(--dark-blue));
   border: none;
   border-radius: 0.5rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
   color: var(--pure-white);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -288,6 +373,7 @@ body {
   margin-left: 0.5rem;
   width: 1.25rem;
   height: 1.25rem;
+  font-size: var(--font-size-md);
 }
 
 .home-btn-secondary {
@@ -295,7 +381,8 @@ body {
   border: 2px solid var(--accent-blue);
   background: transparent;
   border-radius: 0.5rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
   color: var(--pure-white);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -318,6 +405,7 @@ body {
   width: 2rem;
   height: 2rem;
   color: var(--accent-blue);
+  font-size: var(--font-size-lg);
 }
 
 /* Home Stats Section */
@@ -346,6 +434,7 @@ body {
   flex: 1 1 0;
   min-width: 0;
   text-align: center;
+  transition: transform 0.3s ease;
 }
 
 .home-stat-item:hover {
@@ -353,15 +442,16 @@ body {
 }
 
 .home-stat-number {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
   color: var(--accent-blue);
   margin-bottom: 0.5rem;
 }
 
 .home-stat-label {
   color: var(--gray-300);
-  font-size: 0.9rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
 }
 
 /* Home Services Section */
@@ -382,14 +472,14 @@ body {
 }
 
 .home-section-title {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
   margin-bottom: 1.5rem;
 }
 
 @media (min-width: 768px) {
   .home-section-title {
-    font-size: 3rem;
+    font-size: var(--font-size-hero);
   }
 }
 
@@ -398,7 +488,8 @@ body {
 }
 
 .home-section-description {
-  font-size: 1.25rem;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-normal);
   color: var(--gray-300);
   max-width: 48rem;
   margin: 0 auto;
@@ -432,6 +523,7 @@ body {
   color: var(--accent-blue);
   margin-bottom: 1.5rem;
   transition: transform 0.3s ease;
+  font-size: var(--font-size-lg);
 }
 
 .home-service-card:hover .home-service-icon {
@@ -439,14 +531,16 @@ body {
 }
 
 .home-service-title {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
   margin-bottom: 1rem;
   color: var(--pure-white);
 }
 
 .home-service-description {
   color: var(--gray-300);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
   line-height: 1.6;
 }
 
@@ -464,19 +558,20 @@ body {
 }
 
 .home-cta-title {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
   margin-bottom: 1.5rem;
 }
 
 @media (min-width: 768px) {
   .home-cta-title {
-    font-size: 3rem;
+    font-size: var(--font-size-hero);
   }
 }
 
 .home-cta-description {
-  font-size: 1.25rem;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-normal);
   margin-bottom: 2rem;
   opacity: 0.9;
 }
@@ -489,7 +584,8 @@ body {
   color: var(--light-blue);
   border: none;
   border-radius: 0.5rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -504,6 +600,7 @@ body {
   margin-right: 0.5rem;
   width: 1.25rem;
   height: 1.25rem;
+  font-size: var(--font-size-md);
 }
 
 /* Home Footer */
@@ -535,8 +632,8 @@ body {
 }
 
 .home-footer-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
   margin-bottom: 1rem;
 }
 
@@ -548,195 +645,20 @@ body {
 
 .home-footer-text {
   color: var(--gray-400);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
   text-align: center;
-}
-
-/* Home Achievements Section */
-.home-achievements-section {
-  padding: 5rem 0;
-  background: linear-gradient(135deg, rgba(30, 58, 138, 0.1), var(--primary-black));
-}
-
-.home-achievements-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.home-achievements-grid {
-  display: grid;
-  gap: 2rem;
-}
-
-@media (min-width: 768px) {
-  .home-achievements-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.home-achievement-card {
-  display: flex;
-  padding: 2rem;
-  background-color: rgba(17, 24, 39, 0.5);
-  backdrop-filter: blur(4px);
-  border-radius: 1rem;
-  border: 1px solid var(--gray-800);
-  transition: all 0.3s ease;
-}
-
-.home-achievement-card:hover {
-  border-color: rgba(59, 130, 246, 0.5);
-  transform: translateY(-5px);
-}
-
-.home-achievement-icon {
-  color: var(--accent-blue);
-  margin-right: 1rem;
-  flex-shrink: 0;
-}
-
-.home-achievement-content {
-  flex: 1;
-}
-
-.home-achievement-title {
-  font-size: 1.125rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: var(--pure-white);
-}
-
-.home-achievement-year {
-  font-size: 0.875rem;
-  color: var(--accent-blue);
-  margin-bottom: 0.5rem;
-}
-
-.home-achievement-description {
-  font-size: 0.875rem;
-  color: var(--gray-300);
-  line-height: 1.5;
-}
-
-/* Home Testimonials Section */
-.home-testimonials-section {
-  padding: 5rem 0;
-  background: linear-gradient(135deg, rgba(30, 58, 138, 0.1), var(--primary-black));
-}
-
-.home-testimonials-container {
-  max-width: 64rem;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  text-align: center;
-}
-
-.home-testimonial-wrapper {
-  position: relative;
-}
-
-.home-testimonial-card {
-  background-color: rgba(17, 24, 39, 0.5);
-  backdrop-filter: blur(4px);
-  border-radius: 1rem;
-  padding: 2rem;
-  border: 1px solid var(--gray-800);
-}
-
-@media (min-width: 768px) {
-  .home-testimonial-card {
-    padding: 3rem;
-  }
-}
-
-.home-stars {
-  display: flex;
-  justify-content: center;
-  gap: 0.25rem;
-  margin-bottom: 1.5rem;
-}
-
-.home-star-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  color: #fbbf24;
-  fill: currentColor;
-}
-
-.home-testimonial-quote {
-  font-size: 1.25rem;
-  color: var(--gray-300);
-  margin-bottom: 2rem;
-  font-style: italic;
-}
-
-@media (min-width: 768px) {
-  .home-testimonial-quote {
-    font-size: 1.5rem;
-  }
-}
-
-.home-testimonial-author {
-  text-align: center;
-}
-
-.home-author-name {
-  font-weight: bold;
-  color: var(--accent-blue);
-  font-size: 1.125rem;
-}
-
-.home-author-role {
-  color: var(--gray-400);
-}
-
-.home-testimonial-indicators {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 2rem;
-}
-
-.home-indicator {
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 50%;
-  background-color: var(--gray-700);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.home-indicator-active {
-  background-color: var(--accent-blue);
-  width: 2rem;
-  border-radius: 1rem;
 }
 
 /* Home Icon Styles */
 .home-icon-emoji {
-  font-size: 2rem;
+  font-size: var(--font-size-lg);
   display: block;
-}
-
-.home-btn-icon {
-  margin-left: 0.5rem;
-  font-size: 1.2rem;
-}
-
-.home-scroll-icon {
-  font-size: 2rem;
-  color: var(--accent-blue);
 }
 
 .home-star-icon {
   color: #fbbf24;
-  font-size: 1.5rem;
-}
-
-.home-cta-icon {
-  margin-right: 0.5rem;
-  font-size: 1.2rem;
+  font-size: var(--font-size-md);
 }
 
 /* Home Animations */
@@ -780,175 +702,52 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* Home Utility Classes */
-.home-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.home-text-center {
-  text-align: center;
-}
-
-.home-mb-4 {
-  margin-bottom: 2rem;
-}
-
-.home-mb-6 {
-  margin-bottom: 3rem;
-}
-
-.home-mt-4 {
-  margin-top: 2rem;
-}
-
-.home-mt-6 {
-  margin-top: 3rem;
-}
-
-.home-flex {
-  display: flex;
-}
-
-.home-flex-col {
-  flex-direction: column;
-}
-
-.home-items-center {
-  align-items: center;
-}
-
-.home-justify-center {
-  justify-content: center;
-}
-
-.home-gap-4 {
-  gap: 1rem;
-}
-
-.home-gap-6 {
-  gap: 1.5rem;
-}
-
-.home-w-full {
-  width: 100%;
-}
-
-.home-h-full {
-  height: 100%;
-}
-
-/* Home Loading States */
-.home-loading {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-.home-skeleton {
-  background: linear-gradient(90deg, var(--gray-800) 25%, var(--gray-700) 50%, var(--gray-800) 75%);
-  background-size: 200% 100%;
-  animation: home-skeleton 1.5s infinite;
-}
-
-@keyframes home-skeleton {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
-}
-
-/* Home Focus States */
-.home-btn-primary:focus,
-.home-btn-secondary:focus,
-.home-cta-button:focus {
-  outline: 2px solid var(--accent-blue);
-  outline-offset: 2px;
-}
-
-.home-nav-link:focus {
-  outline: 2px solid var(--accent-blue);
-  outline-offset: 4px;
-  border-radius: 4px;
-}
-
-/* Home Print Styles */
-@media print {
-  .home-portfolio-nav,
-  .home-floating-element,
-  .home-scroll-indicator {
-    display: none;
-  }
-  
-  .home-portfolio-container {
-    background: white;
-    color: black;
-  }
-  
-  .home-hero-section {
-    min-height: auto;
-    padding: 2rem 0;
-  }
-}
-
-/* Home Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
-  .home-floating-element,
-  .home-scroll-indicator {
-    animation: none;
-  }
-  
-  .home-btn-primary:hover,
-  .home-service-card:hover,
-  .home-achievement-card:hover {
-    transform: none;
-  }
-  
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-/* Home High Contrast Mode */
-@media (prefers-contrast: high) {
-  .home-portfolio-container {
-    background: #000000;
-    color: #ffffff;
-  }
-  
-  .home-service-card,
-  .home-achievement-card,
-  .home-testimonial-card {
-    border: 2px solid #ffffff;
-  }
-  
-  .home-btn-primary,
-  .home-btn-secondary,
-  .home-cta-button {
-    border: 2px solid #ffffff;
-  }
-}
-
-/* Mobile Responsiveness */
+/* Mobile Responsiveness for Photo */
 @media (max-width: 640px) {
+  .home-profile-photo {
+    width: 150px;
+    height: 150px;
+    border-width: 3px;
+  }
+  
   .home-hero-title {
-    font-size: 2.5rem;
+    font-size: var(--font-size-xl);
   }
   
   .home-section-title {
-    font-size: 2rem;
+    font-size: var(--font-size-lg);
   }
   
   .home-hero-description {
-    font-size: 1.1rem;
+    font-size: var(--font-size-base);
   }
   
   .home-service-card {
     padding: 1.5rem;
+  }
+  
+  .home-service-title {
+    font-size: var(--font-size-base);
+  }
+  
+  .home-service-description {
+    font-size: var(--font-size-sm);
+  }
+  
+  .home-stat-number {
+    font-size: var(--font-size-lg);
+  }
+  
+  .home-stat-label {
+    font-size: var(--font-size-xs);
+  }
+  
+  .home-cta-title {
+    font-size: var(--font-size-lg);
+  }
+  
+  .home-cta-description {
+    font-size: var(--font-size-base);
   }
 }
 

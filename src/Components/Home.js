@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
 import { useNavigate } from "react-router-dom";
+import profileImg from "./assets/kkk.jpg";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -22,13 +23,6 @@ const Home = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const stats = [
-    { number: "4+", label: "Years Experience" },
-    { number: "10+", label: "Projects Completed" },
-    { number: "10+", label: "Technologies Mastered" },
-    { number: "50+", label: "Certifications" }
-  ];
-
   const services = [
     {
       icon: "📊",
@@ -38,8 +32,7 @@ const Home = () => {
     {
       icon: "👾",
       title: "UI UX Design",
-      description
-      : "Familiar with Figma and other design tools experience in responsive design"
+      description: "Familiar with Figma and other design tools experience in responsive design"
     },
     {
       icon: "💻",
@@ -109,9 +102,29 @@ const Home = () => {
         </div>
 
         <div className="home-hero-content">
+          {/* Profile Photo Section */}
+          <div className="home-profile-photo-container">
+            <div className="home-profile-photo">
+              {/* Replace the src with your actual photo path */}
+              <img 
+                src={profileImg}
+                alt="Kavin Mark Perera" 
+                className="home-profile-image"
+                onError={(e) => {
+                  // Fallback if image doesn't load
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+              {/* Fallback placeholder */}
+              <div className="home-photo-placeholder" style={{display: 'none'}}>
+                <span className="home-photo-icon">📸</span>
+                <span className="home-photo-text">Add Photo</span>
+              </div>
+            </div>
+          </div>
+
           <div className="home-hero-text">
-            
-            
             <h1 className="home-hero-title">
               Hi, I'm{' '}
               <span className="home-hero-name">
@@ -132,28 +145,10 @@ const Home = () => {
 
           {/* Scroll Indicator */}
           <div className="home-scroll-indicator">
-            <div className="home-scroll-icon">⬇</div>
+            
           </div>
         </div>
       </section>
-
-      {/* Stats Section 
-      <section className="home-stats-section">
-        <div className="home-stats-container">
-          <div className="home-stats-grid">
-            {stats.map((stat, index) => (
-              <div key={index} className="home-stat-item">
-                <div className="home-stat-number">
-                  {stat.number}
-                </div>
-                <div className="home-stat-label">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>*/}
 
       {/* Services Section */}
       <section className="home-services-section">

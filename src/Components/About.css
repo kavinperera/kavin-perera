@@ -1,4 +1,4 @@
-/* About.css - Professional Resume Design */
+/* About.css - Professional Resume Design - Standardized Fonts */
 /* Root Variables */
 :root {
   --primary-dark: #0a0a0f;
@@ -15,6 +15,20 @@
   --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.2);
   --transition: all 0.3s ease;
   --border-radius: 8px;
+  
+  /* Standardized Font Sizes */
+  --font-size-xl: 2.5rem;      /* Main titles */
+  --font-size-lg: 1.8rem;      /* Section titles */
+  --font-size-md: 1.2rem;      /* Subsection titles */
+  --font-size-base: 1rem;      /* Body text */
+  --font-size-sm: 0.9rem;      /* Small text */
+  --font-size-xs: 0.8rem;      /* Extra small text */
+  
+  /* Standardized Font Weights */
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
 }
 
 /* Global Styles */
@@ -30,6 +44,8 @@
   background: var(--primary-dark);
   color: var(--text-white);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
   opacity: 0;
   transform: translateY(20px);
   transition: var(--transition);
@@ -55,8 +71,8 @@
 }
 
 .resume-title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
   margin-bottom: 0.5rem;
   background: linear-gradient(135deg, var(--text-white), var(--accent-blue));
   -webkit-background-clip: text;
@@ -65,7 +81,8 @@
 }
 
 .resume-subtitle {
-  font-size: 1.1rem;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-normal);
   color: var(--text-gray);
   margin-bottom: 2rem;
 }
@@ -79,10 +96,10 @@
   border: none;
   border-radius: 50px;
   color: white;
-  font-weight: 600;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
   cursor: pointer;
   transition: var(--transition);
-  font-size: 0.95rem;
 }
 
 .download-resume-btn:hover {
@@ -117,12 +134,12 @@
   padding: 0.8rem 1.2rem;
   background: transparent;
   border: 1px solid var(--border-color);
-  border-radius: 25px;;
+  border-radius: 25px;
   color: var(--text-gray);
   cursor: pointer;
   transition: var(--transition);
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
 }
 
 .nav-tab:hover {
@@ -138,7 +155,7 @@
 }
 
 .tab-icon {
-  font-size: 1rem;
+  font-size: var(--font-size-base);
 }
 
 /* Content Area */
@@ -169,8 +186,8 @@
 }
 
 .section-title {
-  font-size: 2.2rem;
-  font-weight: 700;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
   color: var(--text-white);
   margin-bottom: 1rem;
 }
@@ -200,14 +217,15 @@
 }
 
 .professional-title {
-  font-size: 1.3rem;
+  font-size: var(--font-size-md);
   color: var(--accent-blue);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   margin-bottom: 0.5rem;
 }
 
 .subtitle {
-  font-size: 1rem;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
   color: var(--text-gray);
 }
 
@@ -229,11 +247,13 @@
   align-items: center;
   gap: 0.5rem;
   color: var(--text-light-gray);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
 }
 
 .contact-icon {
   color: var(--accent-blue);
-  font-size: 1rem;
+  font-size: var(--font-size-base);
 }
 
 .resume-grid {
@@ -256,9 +276,17 @@
 .objectives-section h3,
 .languages-section h3 {
   color: var(--accent-blue);
-  font-size: 1.5rem;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
   margin-bottom: 1rem;
-  font-weight: 600;
+}
+
+.summary-section p,
+.objectives-section p {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.6;
+  color: var(--text-light-gray);
 }
 
 .objectives-list {
@@ -272,10 +300,12 @@
   align-items: center;
   gap: 1rem;
   color: var(--text-light-gray);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
 }
 
 .objective-icon {
-  font-size: 1.2rem;
+  font-size: var(--font-size-md);
 }
 
 .language-list {
@@ -295,13 +325,15 @@
 }
 
 .language-name {
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
   color: var(--text-white);
 }
 
 .language-level {
   color: var(--accent-blue);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
 }
 
 /* Education Section */
@@ -368,16 +400,16 @@
 }
 
 .entry-title h3 {
-  font-size: 1.4rem;
+  font-size: var(--font-size-md);
   color: var(--text-white);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 .entry-status {
   padding: 0.3rem 1rem;
   border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
 }
 
 .entry-status.current {
@@ -403,21 +435,27 @@
   justify-content: space-between;
   align-items: center;
   color: var(--text-gray);
-  font-size: 0.9rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
   flex-wrap: wrap;
 }
 
 .institution {
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
   color: var(--accent-blue);
 }
 
 .duration {
   color: var(--text-gray);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
 }
 
 .entry-content {
   color: var(--text-light-gray);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
   line-height: 1.6;
 }
 
@@ -425,6 +463,8 @@
   font-style: italic;
   margin-bottom: 1rem;
   color: var(--accent-blue);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
 }
 
 .key-areas,
@@ -441,7 +481,8 @@
   background: rgba(59, 130, 246, 0.1);
   color: var(--accent-blue);
   border-radius: 15px;
-  font-size: 0.8rem;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
   border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
@@ -472,13 +513,14 @@
 }
 
 .subject {
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
   color: var(--text-white);
 }
 
 .grade {
-  font-weight: 700;
-  font-size: 1.2rem;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-md);
   color: var(--accent-blue);
 }
 
@@ -496,13 +538,14 @@
 }
 
 .stat-number {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
   color: var(--accent-blue);
 }
 
 .stat-label {
-  font-size: 0.9rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
   color: var(--text-gray);
 }
 
@@ -517,6 +560,8 @@
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
   color: var(--text-light-gray);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
 }
 
 .responsibility-list li::before {
@@ -524,7 +569,7 @@
   position: absolute;
   left: 0;
   color: var(--accent-blue);
-  font-size: 0.8rem;
+  font-size: var(--font-size-xs);
 }
 
 /* Sports Section */
@@ -584,20 +629,28 @@
 }
 
 .achievement-icon {
-  font-size: 2rem;
+  font-size: var(--font-size-lg);
   color: var(--accent-blue);
 }
 
 .achievement-info h3 {
-  font-size: 1.3rem;
+  font-size: var(--font-size-md);
   color: var(--text-white);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   margin-bottom: 0.3rem;
 }
 
 .achievement-year {
   color: var(--text-gray);
-  font-size: 0.9rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+}
+
+.achievement-card p {
+  color: var(--text-light-gray);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.6;
 }
 
 .sports-stats {
@@ -611,7 +664,8 @@
   color: var(--accent-blue);
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 1.5rem;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
 }
 
 .stats-grid {
@@ -657,9 +711,9 @@
 }
 
 .project-header h3 {
-  font-size: 1.3rem;
+  font-size: var(--font-size-md);
   color: var(--text-white);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 .project-links {
@@ -669,7 +723,7 @@
 
 .project-link {
   color: var(--text-gray);
-  font-size: 1.2rem;
+  font-size: var(--font-size-md);
   cursor: pointer;
   transition: var(--transition);
 }
@@ -690,13 +744,15 @@
   background: rgba(59, 130, 246, 0.1);
   color: var(--accent-blue);
   border-radius: 15px;
-  font-size: 0.8rem;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
   border: 1px solid rgba(59, 130, 246, 0.3);
-  font-weight: 500;
 }
 
 .project-description {
   color: var(--text-light-gray);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
   line-height: 1.6;
   margin-bottom: 1rem;
 }
@@ -709,13 +765,14 @@
 
 .project-features span {
   color: var(--text-gray);
-  font-size: 0.9rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
 }
 
-/* Skills Section - Updated for 5 cards in one line */
+/* Skills Section */
 .skills-layout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 5 equal columns */
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 4rem;
 }
@@ -723,7 +780,7 @@
 .skills-column {
   display: flex;
   flex-direction: column;
-  gap: 0; /* Remove gap since we only have one card per column */
+  gap: 0;
 }
 
 .skill-category {
@@ -736,9 +793,9 @@
 
 .skill-category h3 {
   color: var(--accent-blue);
-  font-size: 1.2rem;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
   margin-bottom: 1.5rem;
-  font-weight: 600;
   border-bottom: 2px solid rgba(59, 130, 246, 0.3);
   padding-bottom: 0.5rem;
   text-align: center;
@@ -767,16 +824,16 @@
 }
 
 .skill-name {
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   color: var(--text-white);
-  font-size: 0.9rem;
+  font-size: var(--font-size-sm);
 }
 
 .skill-level {
   padding: 0.2rem 0.6rem;
   border-radius: 12px;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
 }
 
 .skill-level.expert {
@@ -800,26 +857,26 @@
 /* Responsive Design for Skills Section */
 @media (max-width: 1400px) {
   .skills-layout {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns on smaller screens */
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
 }
 
 @media (max-width: 1024px) {
   .skills-layout {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
   .skills-layout {
-    grid-template-columns: 1fr; /* Single column on mobile */
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
   
   .skill-category h3 {
-    font-size: 1.1rem;
+    font-size: var(--font-size-base);
   }
   
   .skill-item {
@@ -827,14 +884,14 @@
   }
   
   .skill-name {
-    font-size: 0.85rem;
+    font-size: var(--font-size-xs);
   }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .resume-title {
-    font-size: 2rem;
+    font-size: var(--font-size-lg);
   }
   
   .full-name {
@@ -847,7 +904,7 @@
   
   .nav-tab {
     padding: 0.6rem 1rem;
-    font-size: 0.8rem;
+    font-size: var(--font-size-xs);
   }
   
   .tab-text {
